@@ -10,9 +10,9 @@ defmodule Helper.TextPageCached do
   @run_every 60 * 60 * 1000
 
   def start_link(state) do
-    repo = Keyword.fetch!(state, :repo)
-    schema = Keyword.fetch!(state, :schema)
-    GenServer.start_link(__MODULE__, name: __MODULE__, schema: schema, repo: repo)
+    # repo = Keyword.fetch!(state, :repo)
+    # schema = Keyword.fetch!(state, :schema)
+    GenServer.start_link(__MODULE__, state, name: __MODULE__)
   end
 
   def init(state) do
@@ -39,7 +39,11 @@ defmodule Helper.TextPageCached do
     end
   end
 
-  def populate(state) do
+  def reload do
+    Process.send_after(__MODULE__, :populate, 1)
+  end
+
+  defp populate(state) do
     repo = Keyword.fetch!(state, :repo)
     schema = Keyword.fetch!(state, :schema)
     pages = schema |> where(enabled: true) |> repo.all()
