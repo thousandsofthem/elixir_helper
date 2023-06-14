@@ -41,6 +41,11 @@ defimpl Helper.Blank.Protocol, for: Integer do
   def blank?(_), do: false
 end
 
+# Floats are never blank
+defimpl Helper.Blank.Protocol, for: Float do
+  def blank?(_), do: false
+end
+
 defimpl Helper.Blank.Protocol, for: BitString do
   def blank?(""), do: true
   def blank?(_), do: false
