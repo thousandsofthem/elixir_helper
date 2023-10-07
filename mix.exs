@@ -1,10 +1,12 @@
 defmodule Helper.MixProject do
   use Mix.Project
 
+  @version "0.1.1"
+
   def project do
     [
       app: :helper,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -23,7 +25,7 @@ defmodule Helper.MixProject do
     [
       {:jason, ">= 0.0.0"},
       {:plug, ">= 0.0.0"},
-      {:ecto_sql, ">= 0.0.0"},
+      {:ecto_sql, ">= 0.0.0"}
       # {:gettext, ">= 0.0.0"},
       # {:timex, ">= 0.0.0"},
 
@@ -31,4 +33,6 @@ defmodule Helper.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
+
+  def version, do: @version
 end
