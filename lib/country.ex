@@ -26,9 +26,11 @@ defmodule Helper.Countries do
     %Country{iso: "BH", name: "Bahrain"},
     %Country{iso: "BI", name: "Burundi"},
     %Country{iso: "BJ", name: "Benin"},
+    %Country{iso: "BL", name: "Saint Barthelemy"},
     %Country{iso: "BM", name: "Bermuda"},
     %Country{iso: "BN", name: "Brunei"},
     %Country{iso: "BO", name: "Bolivia"},
+    %Country{iso: "BQ", name: "Bonaire, Sint Eustatius and Saba"},
     %Country{iso: "BR", name: "Brazil"},
     %Country{iso: "BS", name: "Bahamas"},
     %Country{iso: "BT", name: "Bhutan"},
@@ -96,6 +98,7 @@ defmodule Helper.Countries do
     %Country{iso: "ID", name: "Indonesia"},
     %Country{iso: "IE", name: "Ireland"},
     %Country{iso: "IL", name: "Israel"},
+    %Country{iso: "IM", name: "Isle of Man"},
     %Country{iso: "IN", name: "India"},
     %Country{iso: "IO", name: "British Indian Ocean Territory"},
     %Country{iso: "IQ", name: "Iraq"},
@@ -132,6 +135,7 @@ defmodule Helper.Countries do
     %Country{iso: "MC", name: "Monaco"},
     %Country{iso: "MD", name: "Moldova"},
     %Country{iso: "ME", name: "Montenegro"},
+    %Country{iso: "MF", name: "Saint Martin"},
     %Country{iso: "MG", name: "Madagascar"},
     %Country{iso: "MH", name: "Marshall Islands"},
     %Country{iso: "MK", name: "Macedonia"},
@@ -232,8 +236,7 @@ defmodule Helper.Countries do
     %Country{iso: "YE", name: "Yemen"},
     %Country{iso: "ZA", name: "South Africa"},
     %Country{iso: "ZM", name: "Zambia"},
-    %Country{iso: "ZW", name: "Zimbabwe"},
-    %Country{iso: "BQ", name: "Bonaire, Sint Eustatius and Saba"}
+    %Country{iso: "ZW", name: "Zimbabwe"}
   ]
 
   def all, do: @countries
