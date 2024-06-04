@@ -5,6 +5,6 @@ defmodule Helper.Country do
   @type t :: %__MODULE__{
           iso: String.t(),
           name: String.t(),
-          prefix: String.t()
+          prefix: String.t() | list(String.t())
         }
 end
