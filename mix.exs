@@ -1,7 +1,7 @@
 defmodule Helper.MixProject do
   use Mix.Project
 
-  @version "0.1.8"
+  @version "0.1.9"
 
   def project do
     [
@@ -25,7 +25,8 @@ defmodule Helper.MixProject do
     [
       {:jason, ">= 0.0.0"},
       {:plug, ">= 0.0.0"},
-      {:ecto_sql, ">= 0.0.0"}
+      {:ecto_sql, ">= 0.0.0"},
+      {:custom_base, "~> 0.2.1"}
       # {:gettext, ">= 0.0.0"},
       # {:timex, ">= 0.0.0"},
 
